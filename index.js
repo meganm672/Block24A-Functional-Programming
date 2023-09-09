@@ -52,6 +52,22 @@ const modifiedArray = newerArray(animals,function(a){
     return a.toLowerCase();
 });
 console.log(modifiedArray);
+
+// Print a string that has a length of more than 11 characters.
+const moreThanEleven = (arr, func) => {
+      let longestWord = '';
+      arr.forEach(function(word){
+        if(word.length > longestWord.length){
+            longestWord = word;
+        }
+      }) ;
+      return longestWord 
+}
+console.log(moreThanEleven(animals));
+
+// Create a function using a callback that takes a string as input and returns the string in reverse order.
+
+
 //currying function
 
 // Create a function that takes the protocol, subdomain, domain, top-level domain (TLD),
