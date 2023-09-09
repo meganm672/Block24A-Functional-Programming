@@ -4,14 +4,36 @@
 const upperCase = (string) => {
     return string.toUpperCase();
 }
-console.log(upperCase("welcome"));
+const greeting = upperCase("welcome");
+console.log(greeting);
 
+//Create a function that takes a number as input and 
+// returns another function that multiplies its input with the original number.
+const multiplies = (numA) => {
+    return function(numB){
+        return numA * numB;
+    };
+}
 
+const productOfThree = multiplies(3);
+const num = productOfThree(7);
 
+console.log(num);
+
+// Create a function that takes two numbers as input and returns an object.
+
+const addFunction = (num1,num2) => {
+    const number1 = num1 + 2;
+    const number2 = num2 + 4;
+    return {a: number1, b: number2};
+}
+
+const newObj = addFunction(5,5);
+console.log(newObj);
 //Higher-order functions
 
 //Converts all string elements to lowercase.
-const animals = ["Hippopotamus", "King Cobra", "Giant Panda", "Crocodile"]
+const animals = ["Hippopotamus", "King Cobra", "Giant Panda", "Crocodile"];
 
 // const newArray = animals.map(function(str){
 //     return str.charAt(0).toLowerCase() + str.slice(1);
