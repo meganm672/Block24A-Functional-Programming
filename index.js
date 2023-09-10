@@ -54,6 +54,9 @@ const modifiedArray = newerArray(animals,function(a){
 console.log(modifiedArray);
 
 // Print a string that has a length of more than 11 characters.
+//what could you pass to filter 
+// start with specifics -condition 
+//then do something that could be reused
 const moreThanEleven = (arr, func) => {
       let longestWord = '';
       arr.forEach(function(word){
@@ -83,6 +86,10 @@ console.log(reverse);
 // and the other simulates a race between two runners over a specified distance. 
 // Return the winner's name or 'It's a tie!' if both runners finish simultaneously.
 
+//generates a runner object
+//runner factory
+//create class with only functions 
+// no class keyword!
 const runnersSpeeds = (speed,name) => {
 
 }
@@ -98,15 +105,10 @@ const runnerRace = (runner1,runner2,raceDistance) => {
 //  The function should be implemented as a curried function that returns a new function for each input parameter.
 
 const concatenatedUrl = (protocol) => {
-    const protocol = 'https://';
-    const sub = (subdomain)=> {
-        const subdomain = 'www.'
-        const domain = (domains) =>{
-            const domains = 'fullstackacademy.'
-            const topLevelDomain = (TLD) => {
-                const TLD = 'com'
-                const endPoint = (endPoints) => {
-                    const endPoints = '/weather'
+   return (subdomain)=> {
+       return  (domains) =>{
+            return  (TLD) => {
+              return  (endPoints) => {
                     return protocol+ subdomain + domains  + TLD + endPoints;
                 };
             };
@@ -114,5 +116,8 @@ const concatenatedUrl = (protocol) => {
     };
 }
 
-const weathers = concatenatedUrl(sub)(domain)(fullstackacademy)(com)(weather);
+const weathers = concatenatedUrl('https://')("www.")("fullstackacademy")(".com")("/weather");
 console.log(weathers);
+
+const stocks = concatenatedUrl('https://')("www.")("fullstackacademy")(".com")("/stocks");
+console.log(stocks);
