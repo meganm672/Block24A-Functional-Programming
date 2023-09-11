@@ -34,7 +34,8 @@ Print a string that has a length of more than 11 characters.</br>
 [Hippopotamus, King Cobra, Giant Panda, Crocodile]	Hippopotamus</br>
 
 Create a function using a callback that takes a string as input and returns the string in reverse order.	</br>
-["Hippopotamus", "King Cobra", "Giant Panda", "Crocodile"]	['sumatopoppiH', 'arboC gniK', 'adnaP tnaiG', 'elidocorC']</br>
+["Hippopotamus", "King Cobra", "Giant Panda", "Crocodile"]</br>
+['sumatopoppiH', 'arboC gniK', 'adnaP tnaiG', 'elidocorC']</br>
 
 Create two functions. One function generates runners with specific speeds, and the other simulates a race between two runners over a specified distance. Return the winner's name or 'It's a tie!' if both runners finish simultaneously.	</br>
 1. Function 1 (speed, name)</br>
