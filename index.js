@@ -32,14 +32,11 @@ const newObj = addFunction(5,5);
 console.log(newObj);
 //Higher-order functions
 
-//Converts all string elements to lowercase.
+
+// this array will be used for the next 3 problems
 const animals = ["Hippopotamus", "King Cobra", "Giant Panda", "Crocodile"];
 
-// const newArray = animals.map(function(str){
-//     return str.charAt(0).toLowerCase() + str.slice(1);
-// });
-// console.log(newArray);
-
+//Converts all string elements to lowercase.
 const newerArray = (arr, func) => {
     const array = [];
     for(i = 0; i < arr.length; i++){
@@ -57,16 +54,16 @@ console.log(modifiedArray);
 //what could you pass to filter 
 // start with specifics -condition 
 //then do something that could be reused
-const moreThanEleven = (arr, func) => {
-      let longestWord = '';
-      arr.forEach(function(word){
-        if(word.length > longestWord.length){
-            longestWord = word;
-        }
-      }) ;
-      return longestWord 
+const moreThanEleven = (arr) => {
+    return arr.filter((element) => {
+        return element.length >11;
+    })
 }
-console.log(moreThanEleven(animals));
+
+const hippo = moreThanEleven(animals)
+
+console.log(hippo);
+
 
 // Create a function using a callback that takes a string as input and returns the string in reverse order.
 
@@ -90,14 +87,28 @@ console.log(reverse);
 //runner factory
 //create class with only functions 
 // no class keyword!
-const runnersSpeeds = (speed,name) => {
-
+const runnerSpeeds = (name ,speed) => {
+    return {runnerName: name, runnerSpeedInMiles: speed};
 }
 
+// this is not correct but i will look at it more another time
 const runnerRace = (runner1,runner2,raceDistance) => {
-
+    let distance = raceDistance;
+    if(runner1.speed > runner2.speed){
+        return runner1.name + " is the winner!";
+    } else if (runner1.speed < runner2.speed){
+        return runner2.name + " is the winner!";
+    } else {
+        return "its a tie!"
+    }
 }
+const runnerA = runnerSpeeds("Megan", 10);
+console.log(runnerA);
+const runnerB = runnerSpeeds("Frank", 15);
+console.log(runnerB);
 
+const race1 = (runnerA, runnerB);
+console.log(race1);
 //currying function
 
 // Create a function that takes the protocol, subdomain, domain, top-level domain (TLD),
